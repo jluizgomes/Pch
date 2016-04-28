@@ -426,18 +426,22 @@ body {
   color: #fff;
 }
 
-.header {
+.page {
+  padding: 0;
+  background-color: #191919;
+}
+.page .header {
   background-color: #191919;
   height: 45px;
   padding: 0;
 }
-.header .tab-nav {
+.page .header .tab-nav {
   position: relative;
   color: #fff;
   background-color: #333;
   height: 45px;
 }
-.header .tab-nav .left-nav {
+.page .header .tab-nav .left-nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -446,7 +450,7 @@ body {
   height: 2.8125rem;
   padding: 0;
 }
-.header .tab-nav .left-nav a {
+.page .header .tab-nav .left-nav a {
   display: block;
   width: 2.8125rem;
   height: 2.8125rem;
@@ -455,7 +459,7 @@ body {
   text-decoration: none;
   padding: 12px;
 }
-.header .tab-nav .right-nav {
+.page .header .tab-nav .right-nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -464,7 +468,7 @@ body {
   height: 2.8125rem;
   padding: 0;
 }
-.header .tab-nav .right-nav a {
+.page .header .tab-nav .right-nav a {
   display: block;
   width: 2.8125rem;
   height: 2.8125rem;
@@ -473,7 +477,7 @@ body {
   text-decoration: none;
   padding: 12px;
 }
-.header .tab-nav .logo {
+.page .header .tab-nav .logo {
   text-align: center;
   height: auto;
   position: absolute;
@@ -481,7 +485,7 @@ body {
   left: 2.8125rem;
   right: 2.8125rem;
 }
-.header .tab-nav .logo a {
+.page .header .tab-nav .logo a {
   font-size: 2rem;
   line-height: 2.3125rem;
   color: #fff;
@@ -491,22 +495,21 @@ body {
   white-space: nowrap;
   margin: 8px;
 }
-
-.main {
+.page .main {
   background-color: #191919;
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
   color: #fff;
   padding: 0;
 }
-.main .items {
+.page .main .items {
   padding: 0;
 }
-.main .items .thumb {
+.page .main .items .thumb {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.main .items .title {
+.page .main .items .title {
   position: absolute;
   font-size: 2.3125rem;
   line-height: 2.3125rem;
@@ -516,21 +519,21 @@ body {
   left: 10px;
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
-.main .items .indicadores {
+.page .main .items .indicadores {
   position: absolute;
   bottom: 10px;
   left: 10px;
   z-index: 1;
 }
-.main .items .indicadores .price, .main .items .indicadores .distance {
+.page .main .items .indicadores .price, .page .main .items .indicadores .distance {
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
   display: inline-block;
   margin-right: 0.625rem;
   color: #fff;
 }
-.main .items .indicadores .price i, .main .items .indicadores .distance i {
+.page .main .items .indicadores .price i, .page .main .items .indicadores .distance i {
   margin-right: 5px;
 }
-.main .items .indicadores .distance i {
+.page .main .items .indicadores .distance i {
   margin-right: 5px;
 }

@@ -14,34 +14,30 @@
 </head>
 
 <body ng-controller="listagem as peachApp">
-  <section class="container-fluid">
+  <section class="page container-fluid">
     <header class="header">
-      <section class="row">
-        <nav class="tab-nav">
-          <section class="left-nav">
-            <a href="#" class="fa fa-bars" aria-hidden="true"></a>
-          </section>
-          <section class="logo">
-            <a href="#">Peach</a>
-          </section>
-          <section class="right-nav">
-            <a href="#" class="fa fa-sliders" aria-hidden="true"></a>
-          </section>
-        </nav>
-      </section>
+      <nav class="tab-nav">
+        <section class="left-nav">
+          <a href="#" class="fa fa-bars" aria-hidden="true"></a>
+        </section>
+        <section class="logo">
+          <a href="#">Peach</a>
+        </section>
+        <section class="right-nav">
+          <a href="#" class="fa fa-sliders" aria-hidden="true"></a>
+        </section>
+      </nav>
     </header>
     <section class="main">
-      <section class="row">
-        <section class="items col-md-4 col-sm-6 col-md-4" ng-repeat="item in contents | limitTo:limit">
-          <a ng-href="javascript:void(0);">
-            <img ng-src="{{item.image}}" alt="{{item.name}}" class="thumb" />
-            <h2 class="title">{{item.name}}</h2>
-            <div class="indicadores">
-              <span class="price"><i class="fa fa-usd" aria-hidden="true"></i>{{item.price}}</span>
-              <span class="distance"><i class="fa fa-location-arrow" aria-hidden="true"></i>{{item.distancia}}<small>km</small></span>
-            </div>
-          </a>
-        </section>
+      <section class="items col-md-4 col-sm-6 col-md-4" ng-repeat="item in contents | limitTo:limit">
+        <a ng-href="javascript:void(0);">
+          <img ng-src="{{item.image}}" alt="{{item.name}}" class="thumb" />
+          <h2 class="title">{{item.name}}</h2>
+          <div class="indicadores">
+            <span class="price"><i class="fa fa-usd" aria-hidden="true"></i>{{item.price}}</span>
+            <span class="distance"><i class="fa fa-location-arrow" aria-hidden="true"></i>{{item.distancia}}<small>km</small></span>
+          </div>
+        </a>
       </section>
     </section>
   </section>
