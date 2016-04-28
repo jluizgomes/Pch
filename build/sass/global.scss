@@ -1,0 +1,119 @@
+@import "compass", "compass/css3", "partial/reset", "partial/normalize","partial/fonts";
+@import url("bootstrap-theme.min.css");
+@import url("bootstrap.min.css");
+@import url("noJS.css");
+body {
+  background-color: #191919;
+  font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  color: #fff;
+}
+.header {
+  background-color: #191919;
+  height: 45px;
+  padding: 0;
+  .tab-nav {
+    position: relative;
+    color: #fff;
+    background-color: #333;
+    height: 45px;
+    .left-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-right: solid 1px #191919;
+      width: 2.8125rem;
+      height: 2.8125rem;
+      padding: 0;
+      a {
+        display: block;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 12px;
+      }
+    }
+    .right-nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-left: solid 1px #191919;
+      width: 2.8125rem;
+      height: 2.8125rem;
+      padding: 0;
+      a {
+        display: block;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        color: #fff;
+        font-size: 1.4rem;
+        text-decoration: none;
+        padding: 12px;
+      }
+    }
+    .logo {
+      text-align: center;
+      height: auto;
+      position: absolute;
+      top: 8px;
+      left: 2.8125rem;
+      right: 2.8125rem;
+      a {
+        font-size: 2rem;
+        line-height: 2.3125rem;
+        color: #fff;
+        font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin: 8px;
+      }
+    }
+  }
+}
+.main {
+  background-color: #191919;
+  font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  color: #fff;
+  padding: 0;
+  .items {
+    padding: 0;
+    .thumb {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .title {
+      position: absolute;
+      font-size: 2.3125rem;
+      line-height: 2.3125rem;
+      color: #fff;
+      z-index: 1;
+      bottom: 10px;
+      left: 10px;
+      font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    }
+    .indicadores {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1;
+      .price {
+        font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        display: inline-block;
+        margin-right: 0.625rem;
+        color: #fff;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .distance {
+        @extend .price;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
