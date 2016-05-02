@@ -2,7 +2,7 @@
 
 var app = angular.module('peachApp', ['angular-loading-bar']).config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
-    cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Custom Loading Message...</div>';
+    cfpLoadingBarProvider.spinnerTemplate = '<div><span class="fa fa-spinner">Carregando...</div>';
   }])
 
 app.controller('listagem', ['$scope', '$http', function ($scope, $http) {

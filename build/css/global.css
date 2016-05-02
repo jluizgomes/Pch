@@ -428,7 +428,6 @@ body {
 }
 
 .page {
-  margin-left: 300px;
   padding: 0;
   background-color: #191919;
 }
@@ -506,6 +505,16 @@ body {
 .page .main .items {
   padding: 0;
 }
+.page .main .items .degrade-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7.5rem;
+  display: block;
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 70%, rgba(0, 0, 0, 0.9) 100%);
+}
 .page .main .items .thumb {
   display: block;
   max-width: 100%;
@@ -516,7 +525,7 @@ body {
   font-size: 2.3125rem;
   line-height: 2.3125rem;
   color: #fff;
-  z-index: 1;
+  z-index: 2;
   bottom: 10px;
   left: 10px;
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
@@ -525,7 +534,7 @@ body {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  z-index: 1;
+  z-index: 2;
 }
 .page .main .items .indicadores .price, .page .main .items .indicadores .distance {
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
@@ -535,7 +544,9 @@ body {
 }
 .page .main .items .indicadores .price i, .page .main .items .indicadores .distance i {
   margin-right: 5px;
+  color: #ff5c3c;
 }
 .page .main .items .indicadores .distance i {
   margin-right: 5px;
+  color: #ff5c3c;
 }
