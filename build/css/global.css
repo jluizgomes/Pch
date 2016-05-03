@@ -421,15 +421,43 @@ table {
   /* Legacy iOS */
 }
 body {
-  background-color: #191919;
-  font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  background: #191919;
   color: #fff;
-  overflow-x: hidden;
+  cursor: auto;
+  font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.page-left, .page-right {
+  cursor: pointer;
+}
+.page-left .closeMenu, .page-right .closeMenu {
+  -webkit-backface-visibility: hidden;
+  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-transition: background 300ms ease;
+  transition: background 300ms ease;
+  -webkit-tap-highlight-color: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1002;
 }
 
 .page {
   padding: 0;
   background-color: #191919;
+  overflow: hidden;
+  position: relative;
 }
 .page .header {
   background-color: #191919;
@@ -496,7 +524,70 @@ body {
   white-space: nowrap;
   margin: 8px;
 }
+.page .left-menu,
+.page .right-menu {
+  max-height: 1080px;
+}
+.page .left-menu {
+  background: #333;
+  bottom: 0;
+  box-sizing: content-box;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  -webkit-transition: -webkit-transform 500ms ease 0s;
+  transition: transform 500ms ease 0s;
+  width: 15.625rem;
+  z-index: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  left: 0;
+}
+.page .left-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.page .left-menu ul li a {
+  text-transform: uppercase;
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  padding: 0.66667rem;
+  -webkit-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+.page .left-menu ul li a:hover {
+  background: #242424;
+}
+.page .left-menu ul li a:active {
+  background: #242424;
+}
+.page .right-menu {
+  background: #333;
+  bottom: 0;
+  box-sizing: content-box;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  -webkit-transition: -webkit-transform 500ms ease 0s;
+  transition: transform 500ms ease 0s;
+  width: 15.625rem;
+  z-index: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  right: 0;
+}
 .page .main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   background-color: #191919;
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
   color: #fff;

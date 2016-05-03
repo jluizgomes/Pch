@@ -59,6 +59,7 @@ gulp.task('watch', function () {
     gulp.watch('./build/sass/**/*.scss', ['compass']);
     gulp.watch('./build/*.html', ['htmlmin']);
     gulp.watch('./build/images/**/*', ['imagemin']);
+    gulp.watch('./build/js/**/*', ['scripts']);
 });
 
 gulp.task('webserver', function () {
