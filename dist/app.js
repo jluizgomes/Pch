@@ -11,8 +11,11 @@ app.controller('listagem', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
-app.config(function($routeProvider) {
-  $routeProvider.when('/list', {
+app.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {
     templateUrl: 'index.html'
+  })
+  .otherwise({
+    redirectTo: '/'
   });
-});
+}]);
