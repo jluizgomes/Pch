@@ -36,4 +36,5 @@ $(function() {
         });
       }
   });
+  $('.items').stop().fadeOut(0)
 });

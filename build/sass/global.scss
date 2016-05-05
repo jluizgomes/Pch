@@ -94,7 +94,7 @@ body {
         left: 2.8125rem;
         right: 2.8125rem;
         a {
-          font-size: 2rem;
+          font-size: 1.7rem;
           line-height: 2.3125rem;
           color: #fff;
           font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
@@ -227,5 +227,39 @@ body {
         }
       }
     }
+  }
+}
+/* The starting CSS styles for the enter animation */
+.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.ng-enter.ng-enter-active {
+  opacity:1;
+}
+#loading-bar-container {
+  position: fixed;
+  margin-left: -60px;
+  left: 50%;
+  top: 30%;
+  z-index: 100;
+  .load-text {
+    float: left;
+    img {
+      margin: 0 auto 20px;
+      display: block;
+      max-width: 20%;
+      height: auto;
+    }
+  }
+  .text {
+    display:block;
+    color: #e30e2e;
+    font-size: 1rem;
+    font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
