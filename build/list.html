@@ -41,8 +41,8 @@
         </nav>
       </header>
       <div id="loading-bar-container"></div>
-      <section class="main-container"  ng-controller="listagem as peachApp">
-        <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents">
+      <section class="main-container" ng-controller="listagem as peachApp">
+        <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents"  data-infinit-scroll-page="loadInfinit()">
           <a ng-href="javascript:void(0);">
             <img ng-src="{{item.image}}" alt="{{item.name}}" class="thumb" />
             <h2 class="title">{{item.name}}</h2>

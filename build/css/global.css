@@ -420,6 +420,61 @@ table {
   src: url("../fonts/GothamLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamLight.woff") format("woff"), url("../fonts/GothamLight.ttf") format("truetype"), url("../fonts/GothamLight.svg#svgFontName") format("svg");
   /* Legacy iOS */
 }
+.menu_profile {
+  padding: 0;
+}
+.menu_profile .btn.back {
+  display: block;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.menu_profile .btn.continue {
+  display: block;
+  background-color: #b6422b;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  transition: background-color 0.5s ease;
+}
+.menu_profile .btn.continue:hover {
+  background-color: #923522;
+}
+.menu_profile h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 2.75rem;
+}
+.menu_profile .menu_items {
+  padding: 0;
+}
+.menu_profile .menu_items ul li {
+  list-style: none;
+  display: block;
+  border-top: 1px solid #373737;
+}
+.menu_profile .menu_items ul li a {
+  display: block;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+  background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
+  text-decoration: none;
+  padding: 20px 50px;
+}
+.menu_profile .menu_items ul li a.active {
+  background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+}
+
+.gallery {
+  overflow-x: hidden;
+}
+
 body {
   background: #191919;
   color: #fff;
