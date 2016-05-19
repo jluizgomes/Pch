@@ -9,7 +9,7 @@ app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
 }]);
 
 app.controller('listagem', ['$scope', '$http', function($scope, $http) {
-  $http.get('http://peach-api.azurewebsites.net/api/Products/-23.84564988765934%20-47.434844970703125/100').success(function(data) {
+  $http.get('https://peach-api.azurewebsites.net/api/Products/-23.84564988765934%20-47.434844970703125/100').success(function(data) {
     $scope.contents = data;
   });
 }]);

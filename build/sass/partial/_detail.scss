@@ -27,29 +27,73 @@
     text-align: center;
     font-size: 2.75rem;
   }
-  .menu_items {
-    padding: 0;
-    ul {
-      li {
-        list-style: none;
-        display: block;
-        border-top: 1px solid #373737;
-        a {
+  .menu_profile_content {
+    margin-top: 250px;
+    position: relative;
+    .menu_items {
+      padding: 0;
+      ul {
+        li {
+          list-style: none;
           display: block;
-          font-size: 0.875rem;
-          color: #fff;
-          font-weight: 700;
-          background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
-          text-decoration: none;
-          padding: 20px 50px;
-          &.active {
-            background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+          border-top: 1px solid #373737;
+          position: relative;
+          > a {
+            display: block;
+            font-size: 0.875rem;
+            color: #fff;
+            font-weight: 700;
+            background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
+            text-decoration: none;
+            padding: 20px 50px;
+            &.active {
+              background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+            }
           }
+        }
+      }
+      .submenu {
+        display: none;
+        position: absolute;
+        width: 250px;
+        min-height: 100%;
+        border: 1px solid #373737;
+        border-top: none;
+        border-left: none;
+        background-color: #191919;
+        right: -78%;
+        top: 0;
+        z-index: 5;
+
+        .submenu-close {
+          position: absolute;
+          top: -18px;
+          right: -18px;
+          width: 36px;
+          height: 36px;
+          cursor: pointer;
+          z-index: 6;
+          background-image: url('fancybox_sprite.png');
         }
       }
     }
   }
 }
 .gallery {
+  position: relative;
   overflow-x: hidden;
+  .arrow-left {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 2%;
+    cursor: pointer;
+  }
+  .arrow-right {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    right: 2%;
+    cursor: pointer;
+  }
 }

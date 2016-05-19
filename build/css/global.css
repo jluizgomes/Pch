@@ -450,15 +450,20 @@ table {
   text-align: center;
   font-size: 2.75rem;
 }
-.menu_profile .menu_items {
+.menu_profile .menu_profile_content {
+  margin-top: 250px;
+  position: relative;
+}
+.menu_profile .menu_profile_content .menu_items {
   padding: 0;
 }
-.menu_profile .menu_items ul li {
+.menu_profile .menu_profile_content .menu_items ul li {
   list-style: none;
   display: block;
   border-top: 1px solid #373737;
+  position: relative;
 }
-.menu_profile .menu_items ul li a {
+.menu_profile .menu_profile_content .menu_items ul li > a {
   display: block;
   font-size: 0.875rem;
   color: #fff;
@@ -467,12 +472,50 @@ table {
   text-decoration: none;
   padding: 20px 50px;
 }
-.menu_profile .menu_items ul li a.active {
+.menu_profile .menu_profile_content .menu_items ul li > a.active {
   background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+}
+.menu_profile .menu_profile_content .menu_items .submenu {
+  display: none;
+  position: absolute;
+  width: 250px;
+  min-height: 100%;
+  border: 1px solid #373737;
+  border-top: none;
+  border-left: none;
+  background-color: #191919;
+  right: -78%;
+  top: 0;
+  z-index: 5;
+}
+.menu_profile .menu_profile_content .menu_items .submenu .submenu-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 6;
+  background-image: url("fancybox_sprite.png");
 }
 
 .gallery {
+  position: relative;
   overflow-x: hidden;
+}
+.gallery .arrow-left {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: 2%;
+  cursor: pointer;
+}
+.gallery .arrow-right {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  right: 2%;
+  cursor: pointer;
 }
 
 body {
