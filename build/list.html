@@ -42,8 +42,8 @@
       </header>
       <div id="loading-bar-container"></div>
       <section class="main-container" ng-controller="listagem as peachApp">
-        <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents"  data-infinit-scroll-page="loadInfinit()">
-          <a ng-href="javascript:void(0);">
+        <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents" data-infinit-scroll-page="loadInfinit()">
+          <a ng-href="detail/{{item.id}}">
             <img ng-src="{{item.image}}" alt="{{item.name}}" class="thumb" />
             <h2 class="title">{{item.name}}</h2>
             <div class="indicadores">
@@ -65,7 +65,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
   <script src="./js/angular-animate.min.js"></script>
-  <script src="./js/ng-infinite-scroll.min.js"></script>
+  <script src="./js/jquery.fancybox.js"></script>
+  <script src="./js/jquery.fancybox.pack.js"></script>
+  <script src="./js/jquery.fancybox-thumbs.js"></script>
   <script src="./js/interface.min.js"></script>
   <script src="./app.js"></script>
 </body>
