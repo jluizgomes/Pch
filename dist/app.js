@@ -14,13 +14,13 @@ app.controller('listagem', ['$scope', '$http', function($scope, $http) {
   });
 }]);
 
-app.controller('DetailCtrl', ['$scope', '$http', '$routeParams',
-  function($scope, $http, $routeParams) {
-    $scope.detailId = $routeParams.detailId;
-    // $http.get('http://peach-api.azurewebsites.net/api/Products/1').success(function(data) {
-    //   $scope.contents = data;
-    // });
-}]);
+// app.controller('DetailCtrl', ['$scope', '$http', '$routeParams',
+//   function($scope, $http, $routeParams) {
+//     $scope.detailId = $routeParams.detailId;
+//     $http.get('http://peach-api.azurewebsites.net/api/Products/1').success(function(data) {
+//       $scope.contents = data;
+//     });
+// }]);
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -30,7 +30,7 @@ app.config(['$routeProvider', function($routeProvider) {
   }).
   when('/detail/:detailId', {
     templateUrl: 'detail.html',
-    controller: 'DetailCtrl'
+    // controller: 'DetailCtrl'
   }).
   otherwise({
     redirectTo: '/'

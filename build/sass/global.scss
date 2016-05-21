@@ -1,7 +1,12 @@
-@import "compass", "compass/css3", "partial/reset", "partial/normalize","partial/fonts","partial/detail";
+@import "compass", "compass/css3", "partial/reset", "partial/normalize","partial/fonts","partial/detail","partial/iphone5";
 @import url("bootstrap-theme.min.css");
 @import url("bootstrap.min.css");
 @import url("noJS.css");
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
 body {
   background: #191919;
   color: #fff;
@@ -39,7 +44,7 @@ body {
 .page {
   padding: 0;
   background-color: #191919;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   .header {
     background-color: #191919;
@@ -171,7 +176,7 @@ body {
   .main {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #191919;
     font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     color: #fff;

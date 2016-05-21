@@ -28,7 +28,6 @@
     font-size: 2.75rem;
   }
   .menu_profile_content {
-    margin-top: 250px;
     position: relative;
     .menu_items {
       padding: 0;
@@ -82,6 +81,7 @@
 .gallery {
   position: relative;
   overflow-x: hidden;
+  padding: 0;
   .arrow-left {
     position: absolute;
     top: 50%;

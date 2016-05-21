@@ -451,7 +451,6 @@ table {
   font-size: 2.75rem;
 }
 .menu_profile .menu_profile_content {
-  margin-top: 250px;
   position: relative;
 }
 .menu_profile .menu_profile_content .menu_items {
@@ -502,6 +501,7 @@ table {
 .gallery {
   position: relative;
   overflow-x: hidden;
+  padding: 0;
 }
 .gallery .arrow-left {
   position: absolute;
@@ -516,6 +516,16 @@ table {
   z-index: 1;
   right: 2%;
   cursor: pointer;
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -554,7 +564,7 @@ body {
 .page {
   padding: 0;
   background-color: #191919;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 .page .header {
@@ -685,7 +695,7 @@ body {
 .page .main {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #191919;
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
   color: #fff;
