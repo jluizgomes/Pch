@@ -50,9 +50,6 @@ $(function() {
     $('.submenu').css({
       'height': $(window).height() - 45
     });
-    $('.submenu-close').css({
-      'height': $(window).height() - 45
-    });
 
     //Close Submenu
     $('.submenu-close').on('click', function() {
@@ -62,8 +59,8 @@ $(function() {
       $('.submenu').animate({
         'right': 0,
         'opacity': 0
-      }, 500, function(){
-        $(this).stop().fadeOut(100, function(){
+      }, 500, function() {
+        $(this).stop().fadeOut(100, function() {
           $(this).css({
             'opacity': '1',
             'right': '-104%'
@@ -72,35 +69,27 @@ $(function() {
       });
     });
 
-    $('.menu_items ul li').find('a').on('click', function() {
-      if($(this).hasClass('active')) {
-        $(this).removeClass('active');
-        $(this).css({
-          'background': '#191919 url("./images/arrow-menu-list.png") 95% center no-repeat'
-        });
-        $('.submenu-close').hide();
-        $('.submenu').hide();
-      } else {
-        $(this).removeClass('active');
-        $(this).css({
-          'background': '#020202 url("./images/arrow-menu-list-active.png") 95% center no-repeat'
-        });
-        $(this).addClass('active');
-        if ($('.menu_items ul li').has('div')) {
-          $('.submenu-close').stop().fadeIn(300);
-          $('.submenu').stop().fadeIn(300);
+    $('.menu_items ul').find('li').each(function() {
+      var $this = $(this);
+      $this.on('mouseenter', function() {
+        $this.find('a').addClass('active');
+        if($this.parent().has('.submenu')){
+          $this.find('.submenu').stop().fadeIn(300);
+        } else {
+          return false;
         }
-      }
+      }).on('mouseleave', function() {
+        $this.find('a').removeClass('active');
+        $('.submenu').stop().fadeOut(300);
+      });
     });
-
   } else {
     $('.menu_items.side').hide();
     $('.menu_items.accordion').show();
     $('.submenu').removeClass('outside');
     $('.submenu').addClass('inside');
-    $('.submenu-close').hide();
     $('.menu_items').find('h3').on('click', function() {
-      if($(this).hasClass('active')) {
+      if ($(this).hasClass('active')) {
         $(this).removeClass('active');
         $('.menu_items h3').css({
           'background': '#191919 url("./images/arrow-menu-list.png") 95% center no-repeat'

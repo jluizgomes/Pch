@@ -471,19 +471,6 @@ table {
 .menu_profile .menu_profile_content .menu_items ul li > a.active {
   background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
 }
-.menu_profile .menu_profile_content .menu_items ul li .submenu-close {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: -104%;
-  width: 40px;
-  height: auto;
-  cursor: pointer;
-  z-index: 6;
-  background: url("../images/arrow-submenu-close.png") center center no-repeat;
-  border-left: 1px solid #373737;
-  cursor: pointer;
-}
 .menu_profile .menu_profile_content .menu_items ul .submenu.outside {
   display: none;
   position: absolute;
@@ -496,7 +483,6 @@ table {
   right: -104%;
   top: 0;
   z-index: 5;
-  padding-right: 39px;
 }
 .menu_profile .menu_profile_content .menu_items ul .submenu.outside a.subitem {
   display: block;

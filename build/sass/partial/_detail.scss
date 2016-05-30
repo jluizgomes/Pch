@@ -48,19 +48,19 @@
               background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
             }
           }
-          .submenu-close {
-            display: none;
-            position: absolute;
-            top: 0;
-            right: -104%;
-            width: 40px;
-            height: auto;
-            cursor: pointer;
-            z-index: 6;
-            background: url('../images/arrow-submenu-close.png') center center no-repeat;
-            border-left: 1px solid #373737;
-            cursor: pointer;
-          }
+          // .submenu-close {
+          //   display: none;
+          //   position: absolute;
+          //   top: 0;
+          //   right: -104%;
+          //   width: 40px;
+          //   height: auto;
+          //   cursor: pointer;
+          //   z-index: 6;
+          //   background: url('../images/arrow-submenu-close.png') center center no-repeat;
+          //   border-left: 1px solid #373737;
+          //   cursor: pointer;
+          // }
         }
         .submenu {
           &.outside {
@@ -75,7 +75,7 @@
             right: -104%;
             top: 0;
             z-index: 5;
-            padding-right: 39px;
+            // padding-right: 39px;
             a.subitem {
               display: block;
               font-size: 0.8rem;
