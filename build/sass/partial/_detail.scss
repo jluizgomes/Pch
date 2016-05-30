@@ -43,24 +43,23 @@
             font-weight: 700;
             background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
             text-decoration: none;
-            padding: 20px 50px;
+            padding: 20px 50px 20px 35px;
+            i {
+              color: #373737;
+              margin-right: 10px;
+              font-size: 1.5rem;
+            }
             &.active {
               background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
             }
+            &:hover {
+              i {
+                color: #b6422b;
+                margin-right: 10px;
+                font-size: 1.5rem;
+              }
+            }
           }
-          // .submenu-close {
-          //   display: none;
-          //   position: absolute;
-          //   top: 0;
-          //   right: -104%;
-          //   width: 40px;
-          //   height: auto;
-          //   cursor: pointer;
-          //   z-index: 6;
-          //   background: url('../images/arrow-submenu-close.png') center center no-repeat;
-          //   border-left: 1px solid #373737;
-          //   cursor: pointer;
-          // }
         }
         .submenu {
           &.outside {
@@ -76,23 +75,25 @@
             top: 0;
             z-index: 5;
             // padding-right: 39px;
-            a.subitem {
-              display: block;
-              font-size: 0.8rem;
-              color: #fff;
-              font-weight: 700;
-              background: rgba(55,55,55,0.5);
-              text-decoration: none;
-              padding: 15px 30px;
-              border-bottom: 1px solid #191919;
-              &.last {
-                border: none;
+            h5 {
+              margin: 0;
+              a.subitem {
+                display: block;
+                font-size: 0.8rem;
+                color: #fff;
+                font-weight: 700;
+                background: rgba(55,55,55,0.5);
+                text-decoration: none;
+                padding: 15px 30px;
+                border-bottom: 1px solid #191919;
+                &:hover {
+                  background: rgba(55,55,55,1);
+                }
               }
             }
           }
         }
       }
-
       &.accordion {
         // display: none;
         h3 {
@@ -106,8 +107,20 @@
           padding: 20px 50px;
           margin: 0;
           cursor: pointer;
+          i {
+            color: #373737;
+            margin-right: 10px;
+            font-size: 1.5rem;
+          }
           &.active {
             background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+          }
+          &:hover {
+            i {
+              color: #b6422b;
+              margin-right: 10px;
+              font-size: 1.5rem;
+            }
           }
         }
         .submenu {
@@ -130,6 +143,9 @@
               border-bottom: 1px solid #191919;
               &.last {
                 border: none;
+              }
+              &:hover {
+                background: rgba(55,55,55,1);
               }
             }
           }

@@ -466,10 +466,20 @@ table {
   font-weight: 700;
   background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
   text-decoration: none;
-  padding: 20px 50px;
+  padding: 20px 50px 20px 35px;
+}
+.menu_profile .menu_profile_content .menu_items ul li > a i {
+  color: #373737;
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 .menu_profile .menu_profile_content .menu_items ul li > a.active {
   background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+}
+.menu_profile .menu_profile_content .menu_items ul li > a:hover i {
+  color: #b6422b;
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 .menu_profile .menu_profile_content .menu_items ul .submenu.outside {
   display: none;
@@ -484,7 +494,10 @@ table {
   top: 0;
   z-index: 5;
 }
-.menu_profile .menu_profile_content .menu_items ul .submenu.outside a.subitem {
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside h5 {
+  margin: 0;
+}
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside h5 a.subitem {
   display: block;
   font-size: 0.8rem;
   color: #fff;
@@ -494,8 +507,8 @@ table {
   padding: 15px 30px;
   border-bottom: 1px solid #191919;
 }
-.menu_profile .menu_profile_content .menu_items ul .submenu.outside a.subitem.last {
-  border: none;
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside h5 a.subitem:hover {
+  background: #373737;
 }
 .menu_profile .menu_profile_content .menu_items.accordion h3 {
   display: block;
@@ -509,8 +522,18 @@ table {
   margin: 0;
   cursor: pointer;
 }
+.menu_profile .menu_profile_content .menu_items.accordion h3 i {
+  color: #373737;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
 .menu_profile .menu_profile_content .menu_items.accordion h3.active {
   background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+}
+.menu_profile .menu_profile_content .menu_items.accordion h3:hover i {
+  color: #b6422b;
+  margin-right: 10px;
+  font-size: 1.5rem;
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu.inside {
   width: 100%;
@@ -532,6 +555,9 @@ table {
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu.inside a.subitem.last {
   border: none;
+}
+.menu_profile .menu_profile_content .menu_items.accordion .submenu.inside a.subitem:hover {
+  background: #373737;
 }
 
 .gallery {
