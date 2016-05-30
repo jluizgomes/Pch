@@ -422,6 +422,7 @@ table {
 }
 .menu_profile {
   padding: 0;
+  position: relative;
 }
 .menu_profile .btn.back {
   display: block;
@@ -450,9 +451,6 @@ table {
   text-align: center;
   font-size: 2.75rem;
 }
-.menu_profile .menu_profile_content {
-  position: relative;
-}
 .menu_profile .menu_profile_content .menu_items {
   padding: 0;
 }
@@ -460,7 +458,6 @@ table {
   list-style: none;
   display: block;
   border-top: 1px solid #373737;
-  position: relative;
 }
 .menu_profile .menu_profile_content .menu_items ul li > a {
   display: block;
@@ -474,28 +471,81 @@ table {
 .menu_profile .menu_profile_content .menu_items ul li > a.active {
   background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
 }
-.menu_profile .menu_profile_content .menu_items .submenu {
+.menu_profile .menu_profile_content .menu_items ul li .submenu-close {
   display: none;
   position: absolute;
-  width: 250px;
+  top: 0;
+  right: -104%;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  z-index: 6;
+  background: url("../images/arrow-submenu-close.png") center center no-repeat;
+  border-left: 1px solid #373737;
+  cursor: pointer;
+}
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside {
+  display: none;
+  position: absolute;
+  width: 340px;
   min-height: 100%;
   border: 1px solid #373737;
   border-top: none;
-  border-left: none;
+  border-bottom: none;
   background-color: #191919;
-  right: -78%;
+  right: -104%;
+  top: 0;
+  z-index: 5;
+  padding-right: 39px;
+}
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside a.subitem {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  background: rgba(55, 55, 55, 0.5);
+  text-decoration: none;
+  padding: 15px 30px;
+  border-bottom: 1px solid #191919;
+}
+.menu_profile .menu_profile_content .menu_items ul .submenu.outside a.subitem.last {
+  border: none;
+}
+.menu_profile .menu_profile_content .menu_items.accordion h3 {
+  display: block;
+  border-top: 1px solid #373737;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 700;
+  background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
+  text-decoration: none;
+  padding: 20px 50px;
+  margin: 0;
+  cursor: pointer;
+}
+.menu_profile .menu_profile_content .menu_items.accordion h3.active {
+  background: #020202 url("../images/arrow-menu-list-active.png") 95% center no-repeat;
+}
+.menu_profile .menu_profile_content .menu_items.accordion .submenu.inside {
+  width: 100%;
+  min-height: 200px;
+  border: none;
+  background-color: #191919;
   top: 0;
   z-index: 5;
 }
-.menu_profile .menu_profile_content .menu_items .submenu .submenu-close {
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 6;
-  background-image: url("fancybox_sprite.png");
+.menu_profile .menu_profile_content .menu_items.accordion .submenu.inside a.subitem {
+  display: block;
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  background: rgba(55, 55, 55, 0.5);
+  text-decoration: none;
+  padding: 20px 80px;
+  border-bottom: 1px solid #191919;
+}
+.menu_profile .menu_profile_content .menu_items.accordion .submenu.inside a.subitem.last {
+  border: none;
 }
 
 .gallery {

@@ -40,9 +40,9 @@ gulp.task('imagemin', function () {
 
 gulp.task('htmlmin', function () {
     return gulp.src('./build/*.html')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
+        // .pipe(htmlmin({
+        //     collapseWhitespace: true
+        // }))
         .pipe(gulp.dest('./dist/'))
         .pipe(connect.reload());
 });
@@ -62,11 +62,13 @@ gulp.task('watch', function () {
     gulp.watch('./build/js/**/*', ['scripts']);
 });
 
-gulp.task('webserver', function () {
-    connect.server({
-        livereload: true
-    });
+gulp.task('connect', function() {
+  connect.server({
+    root: './',
+    port: 8000, 
+    livereload: true
+  });
 });
 
 // Default Task
-gulp.task('default', ['compass', 'imagemin', 'htmlmin', 'scripts', 'watch', 'webserver']);
+gulp.task('default', ['compass', 'imagemin', 'htmlmin', 'scripts', 'connect', 'watch']);

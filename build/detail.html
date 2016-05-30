@@ -40,47 +40,70 @@
       </header>
       <section class="main-container" ng-controller="listagem as peachApp">
         <section class="row">
-        <section class="gallery col-md-9 col-md-push-3">
-          <div class="arrow-left">
-            <img src="images/arrow-gallery-left.png" alt="Arrow Left" />
-          </div>
-          <div class="arrow-right">
-            <img src="images/arrow-gallery-right.png" alt="Arrow Right" />
-          </div>
-          <ul class="gallery-item">
-            <li>
-              <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
-            </li>
-            <li>
-              <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
-            </li>
-            <li>
-              <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
-            </li>
-            <li>
-              <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
-            </li>
-          </ul>
+          <section class="gallery col-md-9 col-md-push-3">
+            <div class="arrow-left">
+              <img src="images/arrow-gallery-left.png" alt="Arrow Left" />
+            </div>
+            <div class="arrow-right">
+              <img src="images/arrow-gallery-right.png" alt="Arrow Right" />
+            </div>
+            <ul class="gallery-item">
+              <li>
+                <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
+              </li>
+              <li>
+                <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
+              </li>
+              <li>
+                <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
+              </li>
+              <li>
+                <a class="fancybox-thumbs" data-fancybox-group="thumb" href="images/img-girl.jpg"><img class="lazyOwl" data-src="images/img-girl.jpg" alt="Babayaga" /></a>
+              </li>
+            </ul>
+          </section>
+          <section class="menu_profile col-md-3 col-md-pull-9">
+            <a href="#" class="btn back"></a>
+            <aside class="menu_profile_content">
+              <h1>Babayaga</h1>
+              <nav class="menu_items side">
+                <ul>
+                  <li><a href="#">Perfil</a>
+                    <div class="submenu">
+                      <ul>
+                        <li><a href="#" class="subitem">Item 1</a></li>
+                        <li><a href="#" class="subitem">Item 2</a></li>
+                        <li><a href="#" class="subitem">Item 3</a></li>
+                        <li><a href="#" class="subitem last">Item 4</a></li>
+                      </ul>
+                    </div>
+                    <span class="submenu-close"></span>
+                  </li>
+                  <li><a href="#">Preços e Serviços</a></li>
+                  <li><a href="#">Disponibilidade</a></li>
+                  <li><a href="#">Estatísticas & Comentários</a></li>
+                </ul>
+                <a href="#" class="btn continue">Continuar</a>
+              </nav>
+              <nav id="accordion" class="menu_items accordion panel-group" role="tablist" aria-multiselectable="true">
+                <h3 id="headingOne" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Perfil</h3>
+                <div id="collapseOne" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <a href="#" class="subitem">Item 1</a>
+                  <a href="#" class="subitem">Item 2</a>
+                  <a href="#" class="subitem">Item 3</a>
+                  <a href="#" class="subitem last">Item 4</a>
+                </div>
+                <h3 id="headingTwo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Preços e Serviços</h3>
+                <div id="collapseTwo" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo"></div>
+                <h3 id="headingThree" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Disponibilidade</h3>
+                <div id="collapseThree" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree"></div>
+                <h3 id="headingFour" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Estatísticas & Comentários</h3>
+                <div id="collapseFour" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour"></div>
+                <a href="#" class="btn continue">Continuar</a>
+              </nav>
+            </aside>
+          </section>
         </section>
-        <section class="menu_profile col-md-3 col-md-pull-9">
-          <a href="#" class="btn back"></a>
-          <aside class="menu_profile_content">
-            <h1>Babayaga</h1>
-            <nav class="menu_items">
-              <div class="submenu">
-                <a href="javascript:void(0);" class="submenu-close"></a>
-              </div>
-              <ul>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Preços e Serviços</a></li>
-                <li><a href="#">Disponibilidade</a></li>
-                <li><a href="#">Estatísticas & Comentários</a></li>
-              </ul>
-              <a href="#" class="btn continue">Continuar</a>
-            </nav>
-          </aside>
-        </section>
-      </section>
       </section>
       <a href="javascript:void(0);" class="closeMenu"></a>
     </section>
@@ -100,7 +123,7 @@
   <script src="./js/interface.min.js"></script>
   <script src="./app.js"></script>
   <script type="text/javascript">
-    //Carousel
+    /* Carousel */
     var owl = $(".gallery-item");
     owl.owlCarousel({
       navigation: false,
@@ -118,7 +141,7 @@
       owl.trigger('owl.prev');
     });
 
-    //Lightbox
+    /* Lightbox */
     $(".fancybox-thumbs").fancybox({
       autoSize: true,
       scrolling: 'auto',
