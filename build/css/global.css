@@ -421,8 +421,9 @@ table {
   /* Legacy iOS */
 }
 .menu_profile {
-  padding: 0;
   position: relative;
+  max-height: 610px;
+  overflow-y: scroll;
 }
 .menu_profile .btn.back {
   display: block;
@@ -518,13 +519,13 @@ table {
   font-weight: 700;
   background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
   text-decoration: none;
-  padding: 20px 50px;
+  padding: 20px 30px 20px 25px;
   margin: 0;
   cursor: pointer;
 }
 .menu_profile .menu_profile_content .menu_items.accordion h3 i {
   color: #373737;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 1.5rem;
 }
 .menu_profile .menu_profile_content .menu_items.accordion h3.active {
@@ -532,7 +533,7 @@ table {
 }
 .menu_profile .menu_profile_content .menu_items.accordion h3:hover i {
   color: #b6422b;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 1.5rem;
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu.inside {
