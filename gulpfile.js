@@ -11,25 +11,24 @@ var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
-var htmlmin = require('gulp-htmlmin');
 
 gulp.task('compass', function () {
-    return gulp.src('./build/sass/**/*.scss')
+    return gulp.src('sass/**/*.scss')
     .pipe(compass({
-        css: './build/css',
-        sass: './build/sass',
-        image: './build/images'
+        css: 'css',
+        sass: 'sass',
+        image: 'images'
     }))
     .pipe(cssnano())
     .pipe(rename('global.min.css'))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('css'))
     .pipe(connect.reload());
 });
 
 // minify new images
 gulp.task('imagemin', function () {
-    var imgSrc = './build/images/**/*',
-        imgDst = './dist/images';
+    var imgSrc = 'images/**/*',
+        imgDst = 'images';
 
     gulp.src(imgSrc)
         .pipe(changed(imgDst))
@@ -38,28 +37,17 @@ gulp.task('imagemin', function () {
         .pipe(connect.reload());
 });
 
-gulp.task('htmlmin', function () {
-    return gulp.src('./build/*.html')
-        // .pipe(htmlmin({
-        //     collapseWhitespace: true
-        // }))
-        .pipe(gulp.dest('./dist/'))
-        .pipe(connect.reload());
-});
-
 gulp.task('scripts', function () {
-    return gulp.src('./build/js/interface.js')
+    return gulp.src('js/interface.js')
         .pipe(rename('interface.min.js'))
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('js'))
         .pipe(connect.reload());
 });
-
 
 gulp.task('watch', function () {
-    gulp.watch('./build/sass/**/*.scss', ['compass']);
-    gulp.watch('./build/*.html', ['htmlmin']);
-    gulp.watch('./build/images/**/*', ['imagemin']);
-    gulp.watch('./build/js/**/*', ['scripts']);
+    gulp.watch('sass/**/*.scss', ['compass']);
+    gulp.watch('images/**/*', ['imagemin']);
+    gulp.watch('js/**/*', ['scripts']);
 });
 
 gulp.task('connect', function() {
@@ -71,4 +59,4 @@ gulp.task('connect', function() {
 });
 
 // Default Task
-gulp.task('default', ['compass', 'imagemin', 'htmlmin', 'scripts', 'connect', 'watch']);
+gulp.task('default', ['compass', 'imagemin', 'scripts', 'connect', 'watch']);

@@ -1,0 +1,80 @@
+<section class="main-container">
+  <section class="row">
+    <section class="gallery col-md-9 col-md-push-3">
+      <div class="arrow-left">
+        <img ng-src="images/arrow-gallery-left.png" alt="Arrow Left" />
+      </div>
+      <div class="arrow-right">
+        <img ng-src="images/arrow-gallery-right.png" alt="Arrow Right" />
+      </div>
+      <ul class="gallery-item">
+        <li>
+          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+        </li>
+        <li>
+          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+        </li>
+        <li>
+          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+        </li>
+        <li>
+          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+        </li>
+      </ul>
+    </section>
+    <section class="menu_profile col-md-3 col-md-pull-9">
+      <a href="#" class="btn back"></a>
+      <aside class="menu_profile_content">
+        <h1>Babayaga</h1>
+        <nav class="menu_items">
+          <div class="submenu">
+            <a href="javascript:void(0);" class="submenu-close"></a>
+          </div>
+          <ul>
+            <li><a ui-sref="list({})">Perfil</a></li>
+            <li><a href="#">Preços e Serviços</a></li>
+            <li><a href="#">Disponibilidade</a></li>
+            <li><a href="#">Estatísticas & Comentários</a></li>
+          </ul>
+          <a ui-sref="list({})" class="btn continue">Continuar</a>
+        </nav>
+      </aside>
+    </section>
+  </section>
+</section>
+
+<script type="text/javascript">
+  //Carousel
+  var owl = $(".gallery-item");
+  owl.owlCarousel({
+    navigation: false,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem: true,
+    pagination: false,
+    lazyLoad: true,
+    responsive: true
+  });
+  $(".arrow-right").click(function() {
+    owl.trigger('owl.next');
+  });
+  $(".arrow-left").click(function() {
+    owl.trigger('owl.prev');
+  });
+
+  //Lightbox
+  $(".fancybox-thumbs").fancybox({
+    autoSize: true,
+    scrolling: 'auto',
+    fitToView: false,
+    width: 'auto',
+    maxWidth: '100%',
+    padding: 0,
+    closeClick: true,
+    prevEffect: 'none',
+    nextEffect: 'none',
+    closeBtn: false,
+    arrows: true,
+    nextClick: true
+  });
+</script>
