@@ -55,16 +55,16 @@ $(function() {
     }
   });
 
-  $('.box-access a.link.lista').on('mouseenter', function(){
+  $('.box-access a.link.lista').on('mouseenter', function() {
     $('.img-cell').addClass('actived');
-  }).on('mouseleave', function(){
+  }).on('mouseleave', function() {
     $('.img-cell').removeClass('actived');
   });
 
-  $('.box-access a.link.video, .img-video').on('mouseenter', function(){
+  $('.box-access a.link.video, .img-video').on('mouseenter', function() {
     $('.img-video').addClass('actived');
     $('.img-cell').addClass('small');
-  }).on('mouseleave', function(){
+  }).on('mouseleave', function() {
     $('.img-video').removeClass('actived');
     $('.img-cell').removeClass('small');
   });

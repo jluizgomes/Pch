@@ -985,3 +985,43 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+
+.locate {
+  display: block;
+  width: 400px;
+}
+.locate h1 {
+  color: #fff;
+  font-size: 1rem;
+  font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  text-align: center;
+}
+.locate .form-locate {
+  background-color: #87230f;
+  padding: 10px;
+}
+.locate .form-locate #locate {
+  border: none;
+  padding: 10px;
+  width: 260px;
+  background-color: #2c2c2c;
+}
+.locate .form-locate #b-go {
+  border: none;
+  color: #87230f;
+  padding: 10px 40px;
+  background-color: #fff;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.locate .form-locate p {
+  color: #fff;
+  margin: 10px 0 0;
+  padding: 10px;
+  background-color: #2c2c2c;
+}
+.locate .form-locate p a {
+  color: #b6422b;
+  text-decoration: none;
+  line-height: 18px;
+}

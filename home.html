@@ -61,7 +61,7 @@
     </aside>
     <aside class="box-access">
       <h3>PEACH - O MOBILE WEB-APP PARA ENTERTENIMENTO ERÓTICO</h3>
-      <a href="#" class="link lista"> > Ver Lista</a>
+      <a href="javascript:void(0);" class="fancybox-media link lista"> > Ver Lista</a>
       <a href="#" class="link video"> > Ver Vídeo</a>
       <a href="#" class="link beone">
         Seja uma <strong>PEACH</strong>
@@ -107,7 +107,19 @@
 <script src="./js/jquery.fancybox.js"></script>
 <script src="./js/jquery.fancybox.pack.js"></script>
 <script src="./js/jquery.fancybox-thumbs.js"></script>
+<script src="./js/jquery.fancybox-media.js"></script>
 <script src="./js/interface.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.fancybox-media').click(function() {
+      $.fancybox.open({
+        href : 'localizacao.html',
+        type : 'iframe',
+        padding : 5
+      });
+    });
+  });
+</script>
 </body>
 
 </html>
