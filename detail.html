@@ -1,80 +1,127 @@
 <section class="main-container">
-  <section class="row">
-    <section class="gallery col-md-9 col-md-push-3">
-      <div class="arrow-left">
-        <img ng-src="images/arrow-gallery-left.png" alt="Arrow Left" />
-      </div>
-      <div class="arrow-right">
-        <img ng-src="images/arrow-gallery-right.png" alt="Arrow Right" />
-      </div>
-      <ul class="gallery-item">
-        <li>
-          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-        </li>
-        <li>
-          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-        </li>
-        <li>
-          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-        </li>
-        <li>
-          <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-        </li>
-      </ul>
+    <section class="row">
+        <section class="gallery col-md-9 col-md-push-3">
+            <div class="arrow-left">
+                <img ng-src="../images/arrow-gallery-left.png" alt="Arrow Left" />
+            </div>
+            <div class="arrow-right">
+                <img ng-src="../images/arrow-gallery-right.png" alt="Arrow Right" />
+            </div>
+            <ul class="gallery-item">
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://esq.h-cdn.co/assets/15/41/1600x800/landscape-1444418511-emilia-clarke-sexiest-woman-alive-2015-4482-11.jpg" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://i2.wp.com/www.almomento.mx/wp-content/uploads/2015/10/gallery-1444418995-emilia-clarke-sexiest-woman-alive-2015-007.jpg"><img class="lazyOwl" ng-src="http://i2.wp.com/www.almomento.mx/wp-content/uploads/2015/10/gallery-1444418995-emilia-clarke-sexiest-woman-alive-2015-007.jpg" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
+                </li>
+            </ul>
+        </section>
+        <section class="menu_profile col-md-3 col-md-pull-9">
+            <a href="#" class="btn back">Voltar</a>
+            <aside class="menu_profile_content">
+                <h1>{{content.name}}</h1>
+                <nav id="accordion" class="menu_items accordion">
+                  <div class="accordion-group">
+                    <div class="accordion-heading">
+                      <h3 id="headingOne" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-user" aria-hidden="true"></i>Perfil</h3>
+                    </div>
+                    <div id="collapseOne" class="submenu accordion-body collapse in">
+                        <div class="subitem accordion-inner">
+                            Genero: {{content.gender}}
+                            <br /> <br />
+                            Idade: {{content.age}}
+                            <br /> <br />
+                            Peso: {{content.weight}}
+                            <br /> <br />
+                            Altura: {{content.height}}
+                            <br /> <br />
+                            Manequim: {{content.mannequin}}
+                            <br /> <br />
+                            Seios: {{content.bust}}
+                            <br /> <br />
+                            Cintura: {{content.waist}}
+                            <br /> <br />
+                            Pes: {{content.feet}}
+                            <br /> <br />
+                            Tattoagem: {{content.tattoo}}
+                            <br /> <br />
+                            Sexualidade: {{content.sexuality}}
+                            <br /> <br />
+                        </div>
+                    </div>
+                    <div class="accordion-heading">
+                      <h3 id="headingTwo" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-usd" aria-hidden="true"></i>Preços e Serviços</h3>
+                    </div>
+                    <div id="collapseTwo" class="submenu accordion-body collapse">
+                        <div class="subitem accordion-inner">
+                            Preço: R$: {{content.price}}
+                            <br /> <br />
+                            Duração: {{content.duration}} /h
+                            <br /> <br />
+                            Disponivel para Viagem: {{content.travel}}
+                            <br /> <br />
+
+                        </div>
+
+                    </div>
+                    <h3 id="headingThree" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class="fa fa-clock-o" aria-hidden="true"></i>Disponibilidade</h3>
+                    <div id="collapseThree" class="submenu accordion-body collapse">
+                      <div class="subitem accordion-inner">
+
+                      </div>
+                    </div>
+                    <h3 id="headingFour" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><i class="fa fa-line-chart" aria-hidden="true"></i>Estatísticas & Comentários</h3>
+                    <div id="collapseFour" class="submenu accordion-body collapse">
+                      <div class="subitem accordion-inner">
+
+                      </div>
+                    </div>
+                    <a href="javascript:history.back(-1)" class="btn continue">Voltar</a>
+                  </div>
+                </nav>
+            </aside>
+        </section>
     </section>
-    <section class="menu_profile col-md-3 col-md-pull-9">
-      <a href="#" class="btn back"></a>
-      <aside class="menu_profile_content">
-        <h1>Babayaga</h1>
-        <nav class="menu_items">
-          <div class="submenu">
-            <a href="javascript:void(0);" class="submenu-close"></a>
-          </div>
-          <ul>
-            <li><a ui-sref="list({})">Perfil</a></li>
-            <li><a href="#">Preços e Serviços</a></li>
-            <li><a href="#">Disponibilidade</a></li>
-            <li><a href="#">Estatísticas & Comentários</a></li>
-          </ul>
-          <a ui-sref="list({})" class="btn continue">Continuar</a>
-        </nav>
-      </aside>
-    </section>
-  </section>
 </section>
 
 <script type="text/javascript">
-  //Carousel
-  var owl = $(".gallery-item");
-  owl.owlCarousel({
-    navigation: false,
-    slideSpeed: 300,
-    paginationSpeed: 400,
-    singleItem: true,
-    pagination: false,
-    lazyLoad: true,
-    responsive: true
-  });
-  $(".arrow-right").click(function() {
-    owl.trigger('owl.next');
-  });
-  $(".arrow-left").click(function() {
-    owl.trigger('owl.prev');
-  });
+    //Carousel
+    var owl = $(".gallery-item");
+    owl.owlCarousel({
+        navigation: false,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        pagination: false,
+        lazyLoad: true,
+        responsive: true
+    });
+    $(".arrow-right").click(function () {
+        owl.trigger('owl.next');
+    });
+    $(".arrow-left").click(function () {
+        owl.trigger('owl.prev');
+    });
 
-  //Lightbox
-  $(".fancybox-thumbs").fancybox({
-    autoSize: true,
-    scrolling: 'auto',
-    fitToView: false,
-    width: 'auto',
-    maxWidth: '100%',
-    padding: 0,
-    closeClick: true,
-    prevEffect: 'none',
-    nextEffect: 'none',
-    closeBtn: false,
-    arrows: true,
-    nextClick: true
-  });
+    ////Lightbox
+    //$(".fancybox-thumbs").fancybox({
+    //autoSize: true,
+    //scrolling: 'auto',
+    //fitToView: false,
+    //width: 'auto',
+    //maxWidth: '100%',
+    //padding: 0,
+    //closeClick: true,
+    //prevEffect: 'none',
+    //nextEffect: 'none',
+    //closeBtn: false,
+    //arrows: true,
+    //nextClick: true
+    //});
 </script>

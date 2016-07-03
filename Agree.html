@@ -1,0 +1,12 @@
+
+        <section class="locate col-xs-12 col-md-12 col-sm-12" modal="showModal">
+          <!-- <h1>Me localize</h1> -->
+          <form class="form-locate col-xs-12 col-md-12 col-sm-12" action="" method="post">
+            <button class="col-xs-7 col-md-7 col-sm-7" type="button" name="localizeme" id="localizeme" ng-click="GetMyLocation()" >{{LocationText}}<i class="fa fa-location-arrow" aria-hidden="true" ></i></button>
+            <input class="col-xs-7 col-md-7 col-sm-7" type="text" name="locate" id="locate" value="">
+            <input class="col-xs-4 col-md-4 col-sm-4" type="button" name="name" id="b-go"  value="IR" ng-hide="{{LocationOK}}" ng-click="GoToList()">
+            <p class="col-xs-12 col-md-12 col-sm-12">
+              Eu tenho mais de 18 anos. <a href="#">Concordo com os Termos e Condições, bem como a política de privacidade.</a>
+            </p>
+          </form>
+        </section>
