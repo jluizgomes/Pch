@@ -26,13 +26,13 @@
             <a href="#" class="btn back">Voltar</a>
             <aside class="menu_profile_content">
                 <h1>{{content.name}}</h1>
-                <nav id="accordion" class="menu_items accordion">
-                  <div class="accordion-group">
-                    <div class="accordion-heading">
-                      <h3 id="headingOne" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i class="fa fa-user" aria-hidden="true"></i>Perfil</h3>
+                <nav class="menu_items accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div role="tab" id="headingOne">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-user" aria-hidden="true"></i>Perfil</h3>
                     </div>
-                    <div id="collapseOne" class="submenu accordion-body collapse in">
-                        <div class="subitem accordion-inner">
+                    <div id="collapseOne" class="submenu panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="subitem panel-body">
                             Genero: {{content.gender}}
                             <br /> <br />
                             Idade: {{content.age}}
@@ -55,11 +55,11 @@
                             <br /> <br />
                         </div>
                     </div>
-                    <div class="accordion-heading">
-                      <h3 id="headingTwo" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-usd" aria-hidden="true"></i>Preços e Serviços</h3>
+                    <div role="tab" id="headingTwo">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-usd" aria-hidden="true"></i>Preços e Serviços</h3>
                     </div>
-                    <div id="collapseTwo" class="submenu accordion-body collapse">
-                        <div class="subitem accordion-inner">
+                    <div id="collapseTwo" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="subitem panel-body">
                             Preço: R$: {{content.price}}
                             <br /> <br />
                             Duração: {{content.duration}} /h
@@ -68,17 +68,20 @@
                             <br /> <br />
 
                         </div>
-
                     </div>
-                    <h3 id="headingThree" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><i class="fa fa-clock-o" aria-hidden="true"></i>Disponibilidade</h3>
-                    <div id="collapseThree" class="submenu accordion-body collapse">
-                      <div class="subitem accordion-inner">
+                    <div role="tab" id="headingThree">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-clock-o" aria-hidden="true"></i>Disponibilidade</h3>
+                    </div>
+                    <div id="collapseThree" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                      <div class="subitem panel-body">
 
                       </div>
                     </div>
-                    <h3 id="headingFour" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><i class="fa fa-line-chart" aria-hidden="true"></i>Estatísticas & Comentários</h3>
-                    <div id="collapseFour" class="submenu accordion-body collapse">
-                      <div class="subitem accordion-inner">
+                    <div role="tab" id="headingFour">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa fa-line-chart" aria-hidden="true"></i>Estatísticas & Comentários</h3>
+                    </div>
+                    <div id="collapseFour" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                      <div class="subitem panel-body">
 
                       </div>
                     </div>
