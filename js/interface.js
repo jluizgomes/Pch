@@ -1,10 +1,10 @@
 $(function() {
-  // $('.main-container').css({
-  //   'height': $(window).height()
-  // });
-  // $('.menu_profile').css({
-  //    'height': $(window).height() - 45
-  // });
+  $('.main-container').css({
+    'height': $(window).height()
+  });
+  $('.menu_profile').css({
+     'height': $(window).height() - 45
+  });
   $('.left-nav a').on('click', function() {
     $('.main').addClass('page-left');
     $('.left-menu').animate({

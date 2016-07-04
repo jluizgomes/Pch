@@ -420,22 +420,14 @@ table {
   src: url("../fonts/GothamLight.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamLight.woff") format("woff"), url("../fonts/GothamLight.ttf") format("truetype"), url("../fonts/GothamLight.svg#svgFontName") format("svg");
   /* Legacy iOS */
 }
-.menu_profile {
-  position: relative;
-  min-height: 622px !important;
-  padding-right: 0;
-}
-.menu_profile .menu_profile_content {
-  width: 100%;
-}
-.menu_profile .btn.back {
+.btn.back {
   display: block;
   font-size: 0.875rem;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
 }
-.menu_profile .btn.continue {
+.btn.continue {
   display: block;
   background-color: #b6422b;
   text-transform: uppercase;
@@ -448,11 +440,20 @@ table {
   transition: background-color 0.5s ease;
   font-size: 2em;
 }
-.menu_profile .btn.continue:hover {
+.btn.continue:hover {
   background-color: #923522;
 }
-.menu_profile .btn.continue i {
+.btn.continue i {
   margin: 0 5px;
+}
+
+.menu_profile {
+  position: relative;
+  min-height: 622px !important;
+  padding-right: 0;
+}
+.menu_profile .menu_profile_content {
+  width: 100%;
 }
 .menu_profile h1 {
   color: #fff;
@@ -561,6 +562,9 @@ table {
   padding: 20px 20px 0;
   border-bottom: 1px solid #191919;
   transition: all 0.5s ease;
+}
+.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem.p-d {
+  font-size: 0.8rem;
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem.last {
   border: none;
@@ -959,6 +963,7 @@ body {
   bottom: 10px;
   left: 10px;
   z-index: 2;
+  font-size: 1.2rem;
 }
 .page .main .main-container .items .indicadores .price, .page .main .main-container .items .indicadores .distance {
   font-family: "GothamLight","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
@@ -1050,6 +1055,7 @@ body {
   background-color: #2c2c2c;
   position: absolute;
   text-transform: uppercase;
+  left: 10px;
 }
 .locate .form-locate #localizeme i {
   color: #fff;
