@@ -42,6 +42,7 @@ $(function() {
       });
     }
   });
+  
   $('.items').stop().fadeOut(0);
 
   $('#detail').css({
