@@ -23,7 +23,6 @@
             </ul>
         </section>
         <section class="menu_profile col-md-3 col-md-pull-9">
-            <a href="#" class="btn back">Voltar</a>
             <aside class="menu_profile_content">
                 <h1>{{content.name}}</h1>
                 <nav class="menu_items accordion" id="accordion" role="tablist" aria-multiselectable="true">
@@ -31,28 +30,18 @@
                     <div role="tab" id="headingOne">
                       <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-user" aria-hidden="true"></i>Perfil</h3>
                     </div>
-                    <div id="collapseOne" class="submenu panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div id="collapseOne" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="subitem panel-body">
-                            Genero: {{content.gender}}
-                            <br /> <br />
-                            Idade: {{content.age}}
-                            <br /> <br />
-                            Peso: {{content.weight}}
-                            <br /> <br />
-                            Altura: {{content.height}}
-                            <br /> <br />
-                            Manequim: {{content.mannequin}}
-                            <br /> <br />
-                            Seios: {{content.bust}}
-                            <br /> <br />
-                            Cintura: {{content.waist}}
-                            <br /> <br />
-                            Pes: {{content.feet}}
-                            <br /> <br />
-                            Tattoagem: {{content.tattoo}}
-                            <br /> <br />
-                            Sexualidade: {{content.sexuality}}
-                            <br /> <br />
+                            <span>Genero: {{content.gender}}</span>
+                            <span>Idade: {{content.age}}</span>
+                            <span>Peso: {{content.weight}}</span>
+                            <span>Altura: {{content.height}}</span>
+                            <span>Manequim: {{content.mannequin}}</span>
+                            <span>Seios: {{content.bust}}</span>
+                            <span>Cintura: {{content.waist}}</span>
+                            <span>Peso: {{content.feet}}</span>
+                            <span>Tatuagem: {{content.tattoo}}</span>
+                            <span>Sexualidade: {{content.sexuality}}</span>
                         </div>
                     </div>
                     <div role="tab" id="headingTwo">
@@ -60,32 +49,21 @@
                     </div>
                     <div id="collapseTwo" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                         <div class="subitem p-d panel-body">
-                            Preço: R$: {{content.price}}
-                            <br /> <br />
-                            Duração: {{content.duration}} /h
-                            <br /> <br />
-                            Disponivel para Viagem: {{content.travel}}
-                            <br /> <br />
-
+                            <span>Preço: {{content.price | currency:"R$"}}</span>
+                            <span>Duração: {{content.duration}} /h</span>
+                            <span>Disponivel para Viagem: {{content.travel}}</span>
                         </div>
                     </div>
                     <div role="tab" id="headingThree">
                       <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-clock-o" aria-hidden="true"></i>Disponibilidade</h3>
                     </div>
                     <div id="collapseThree" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                      <div class="subitem panel-body">
-
-                      </div>
+                        <div class="subitem panel-body">
+                            <span>Telefone: {{content.phonenumber}}</span>
+                        </div>
                     </div>
-                    <div role="tab" id="headingFour">
-                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="fa fa-line-chart" aria-hidden="true"></i>Estatísticas & Comentários</h3>
-                    </div>
-                    <div id="collapseFour" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                      <div class="subitem panel-body">
-
-                      </div>
-                    </div>
-                    <a href="javascript:history.back(-1)" class="btn continue">Voltar</a>
+                    <a href="tel:+{{content.phonenumber}}" class="btn voltar col-xs-6 col-md-6 col-sm-6"><i class="fa fa-chevron-left" aria-hidden="true"></i>Voltar</a>
+                    <a href="tel:+{{content.phonenumber}}" class="btn continue col-xs-6 col-md-6 col-sm-6"><i class="fa fa-phone" aria-hidden="true"></i>Ligar</a>
                   </div>
                 </nav>
             </aside>
@@ -111,6 +89,20 @@
     $(".arrow-left").click(function () {
         owl.trigger('owl.prev');
     });
+
+    if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "true") {
+        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
+            'color':'#b6422b',
+            'margin-right':'20px',
+            'font-size':'1.5rem'
+        });
+    } else if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "false") {
+        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
+            'color': '#373737',
+            'margin-right': '20px',
+            'font-size': '1.5rem'
+        });
+    }
 
     ////Lightbox
     //$(".fancybox-thumbs").fancybox({

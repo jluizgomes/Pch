@@ -1,0 +1,15 @@
+<section class="main-container" >
+    
+    <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents track by item.id">
+        <a ui-sref="detail({id: item.id})">
+            <img ng-src="http://esq.h-cdn.co/assets/15/41/1600x800/landscape-1444418511-emilia-clarke-sexiest-woman-alive-2015-4482-11.jpg" alt="{{item.name}}" class="thumb" />
+            <h2 class="title">{{item.name}}</h2>
+            <div class="indicadores">
+                <span class="price"><i class="fa fa-usd" aria-hidden="true"></i>{{item.price}}/<small>h</small></span>
+                <span class="distance"><i class="fa fa-location-arrow" aria-hidden="true"></i>{{item.distancia}}<small>km</small></span>
+            </div>
+            <div class="degrade-item"></div>
+        </a>
+    </section>    
+</section>
+<a ng-click="loadMore()" class="btn continue"><i class="fa fa-plus" aria-hidden="true"></i>Mais</a>

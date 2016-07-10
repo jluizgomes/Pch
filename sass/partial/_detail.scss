@@ -13,16 +13,32 @@
     color: #fff;
     font-weight: 700;
     padding: 10px 0;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+    @include border-radius(0);
+    font-size: 1.5em;
     transition: background-color 0.5s ease;
-    font-size: 2em;
-    &:hover {
-      background-color: #923522;
-    }
     i {
       margin: 0 5px;
+    }
+    &:hover {
+      background-color: #cb533b;
+    }
+  }
+  &.voltar {
+    display: block;
+    background-color: #b6422b;
+    text-transform: uppercase;
+    color: #923522;
+    border-right: 1px solid #923522;
+    font-weight: 700;
+    padding: 10px 0;
+    @include border-radius(0);
+    font-size: 1.5em;
+    transition: background-color 0.5s ease;
+    i {
+      margin: 0 5px;
+    }
+    &:hover {
+      background-color: #cb533b;
     }
   }
 }
@@ -102,12 +118,12 @@
       h3 {
         display: block;
         border-top: 1px solid #373737;
-        font-size: 0.875rem;
+        font-size: 1rem;
         color: #fff;
         font-weight: 700;
         background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
         text-decoration: none;
-        padding: 16px 30px 16px 25px;
+        padding: 15px 30px 15px 25px;
         margin: 0;
         cursor: pointer;
         i {
@@ -133,22 +149,27 @@
         z-index: 5;
         .subitem {
           display: block;
-          font-size: 0.8rem;
+          font-size: .8rem;
           color: #fff;
           font-weight: 700;
           background: rgba(55, 55, 55, 0.5);
           text-decoration: none;
-          padding: 20px 20px 0;
+          padding: 0;
           border-bottom: 1px solid #191919;
-          transition: all 0.5s ease;
           &.p-d {
             font-size: 0.8rem;
           }
           &.last {
             border: none;
           }
-          &:hover {
-            background: #373737;
+          span {
+            display: block;
+            padding: 11px 20px;
+            border: 1px solid #373737;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            font-size: 0.9rem;
           }
         }
       }
@@ -176,11 +197,11 @@
   }
 }
 .panel {
-    margin-bottom: 0;
-    background-color: nome;
-    border: none;
-    border-radius: 0;
-    @include box-shadow(none);
+  margin-bottom: 0;
+  background-color: nome;
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(none);
 }
 @media screen and (max-width: 990px) {
   .menu_profile {

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pt" ng-app="peachApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Peach App</title>
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="./css/global.min.css">
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.css' type='text/css' media='all' />
+  <link rel="stylesheet" href="./css/jquery.fancybox-thumbs.css">
+  <link rel="stylesheet" href="./css/jquery.fancybox.css">
+  <link rel="stylesheet" href="./css/owl.carousel.css">
+  <link rel="stylesheet" href="./css/owl.theme.css">
+  <link rel="stylesheet" href="./css/owl.transitions.css">
+</head>
+
+<body>
+  <section class="page container-fluid">
+    <nav class="left-menu">
+      <ul>
+        <li><a href="./" ng-click="closeMenu"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+        <li><a href="#/sobre" ng-click="closeMenu"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Sobre</a></li>
+        <li><a href="#/anuncie" ng-click="closeMenu"><i class="fa fa-lock" aria-hidden="true"></i>Anuncie</a></li>
+        <li><a href="#/privacidade" ng-click="closeMenu"><i class="fa fa-lock" aria-hidden="true"></i>Privacidade</a></li>
+      </ul>
+    </nav>
+    <nav class="right-menu"></nav>
+    <section class="main">
+      <header class="header">
+        <nav class="tab-nav">
+          <section class="left-nav">
+            <a href="javascript:void(0);" class="fa fa-bars" aria-hidden="true"></a>
+          </section>
+          <section class="logo">
+            <a href="#">Peach</a>
+          </section>
+          <section class="right-nav">
+            <a href="javascript:void(0);" class="fa fa-sliders" aria-hidden="true"></a>
+          </section>
+        </nav>
+      </header>
+      <div id="loading-bar-container"></div>
+        <ui-view>
+
+        </ui-view>
+      <a href="javascript:void(0);" class="closeMenu"></a>
+    </section>
+  </section>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+  <script src="./js/angular-animate.min.js"></script>
+  <script src="./js/jquery.fancybox.js"></script>
+  <script src="./js/jquery.fancybox.pack.js"></script>
+  <script src="./js/jquery.fancybox-thumbs.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/ngGeolocation.js"></script>
+  <script src="./js/angular-ui-router.min.js"></script>
+  <script src="./js/lazy-scroll.min.js"></script>
+  <script src="./js/app/app.js"></script>
+  <script src="./js/interface.min.js"></script>
+
+</body>
+
+</html>

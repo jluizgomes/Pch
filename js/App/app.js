@@ -29,24 +29,24 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'detailController'
     })
     .state('sobre', {
-        url: '/sobre',
-        templateUrl: 'sobre.html',
-        controller: 'SobreController'
+      url: '/sobre',
+      templateUrl: 'sobre.html',
+      controller: 'SobreController'
     })
     .state('privacidade', {
-        url: '/privacidade',
-        templateUrl: 'privacidade.html',
-        controller: 'PrivacidadeController'
+      url: '/privacidade',
+      templateUrl: 'privacidade.html',
+      controller: 'PrivacidadeController'
     })
     .state('politica', {
-        url: '/politica-privacidade',
-        templateUrl: 'politica-privacidade.html',
-        controller: 'PoliticaController'
+      url: '/politica-privacidade',
+      templateUrl: 'politica-privacidade.html',
+      controller: 'PoliticaController'
     })
     .state('anuncie', {
-        url: '/anuncie',
-        templateUrl: 'anuncie.html',
-        controller: 'AnuncieController'
+      url: '/anuncie',
+      templateUrl: 'anuncie.html',
+      controller: 'AnuncieController'
     });
 
 
@@ -106,13 +106,7 @@ app.controller('AgreeController', ['$scope', '$geolocation', '$state', '$rootSco
       console.log($scope.LocationOK);
       $state.go('List');
     }
-
   };
-
-  //$scope.FnLocationOK = function () {
-  //    return $scope.LocationOK;
-  //};
-
 }]);
 
 
@@ -189,3 +183,29 @@ app.controller('PoliticaController', function($scope, $http) {
 app.controller('AnuncioController', function($scope, $http) {
   console.log('AnuncioController');
 });
+
+app.directive('autoActive', ['$location', function($location) {
+  return {
+    restrict: 'A',
+    scope: false,
+    link: function(scope, element) {
+      function setActive() {
+        var path = $location.path();
+        if (path) {
+          angular.forEach(element.find('li'), function(li) {
+            var anchor = li.querySelector('a');
+            if (anchor.href.match('#' + path + '(?=\\?|$)')) {
+              angular.element(li).addClass('active');
+            } else {
+              angular.element(li).removeClass('active');
+            }
+          });
+        }
+      }
+
+      setActive();
+
+      scope.$on('$locationChangeSuccess', setActive);
+    }
+  }
+}]);

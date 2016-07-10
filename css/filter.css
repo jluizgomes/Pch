@@ -1,0 +1,68 @@
+﻿.right-menu {
+    background-color: #000 !important;
+}
+.right-menu .filter {
+    display:block;
+    margin: 20px 30px;
+}
+.right-menu .filter .filter-box {
+    display:block;
+    margin: 10px 0;
+}
+.right-menu .filter .filter-box label {
+    float: left;
+    margin: 15px 0;
+    color: #87230f;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+.right-menu .filter .filter-box .tipo-content {
+    float: left;
+    margin: 5px;
+    width: 100%;
+}
+.right-menu .filter .filter-box .tipo-content #tipo {
+    float: left;
+    margin: 5px;
+}
+.right-menu .filter .filter-box .tipo-content span {
+    float: left;
+    margin: 5px;
+    font-size: 1rem;
+}
+.right-menu .filter .filter-box #preco {
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    color: #87230f;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.right-menu .filter .filter-box #filtrar-btn {
+    width: 100%;
+    background-color: #87230f;
+    padding: 10px 20px;
+    margin: 10px auto;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+}
+
+.btn.more {
+    background-color: #b6422b;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-radius: 0;
+    transition: background-color .5s ease;
+    font-size: 2em;
+    z-index: 20;
+    position: relative;
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+}

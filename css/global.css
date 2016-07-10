@@ -437,14 +437,34 @@ table {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
+  font-size: 1.5em;
   transition: background-color 0.5s ease;
-  font-size: 2em;
-}
-.btn.continue:hover {
-  background-color: #923522;
 }
 .btn.continue i {
   margin: 0 5px;
+}
+.btn.continue:hover {
+  background-color: #cb533b;
+}
+.btn.voltar {
+  display: block;
+  background-color: #b6422b;
+  text-transform: uppercase;
+  color: #923522;
+  border-right: 1px solid #923522;
+  font-weight: 700;
+  padding: 10px 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.5em;
+  transition: background-color 0.5s ease;
+}
+.btn.voltar i {
+  margin: 0 5px;
+}
+.btn.voltar:hover {
+  background-color: #cb533b;
 }
 
 .menu_profile {
@@ -522,12 +542,12 @@ table {
 .menu_profile .menu_profile_content .menu_items.accordion h3 {
   display: block;
   border-top: 1px solid #373737;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #fff;
   font-weight: 700;
   background: #191919 url("../images/arrow-menu-list.png") 95% center no-repeat;
   text-decoration: none;
-  padding: 16px 30px 16px 25px;
+  padding: 15px 30px 15px 25px;
   margin: 0;
   cursor: pointer;
 }
@@ -554,14 +574,13 @@ table {
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem {
   display: block;
-  font-size: 0.8rem;
+  font-size: .8rem;
   color: #fff;
   font-weight: 700;
   background: rgba(55, 55, 55, 0.5);
   text-decoration: none;
-  padding: 20px 20px 0;
+  padding: 0;
   border-bottom: 1px solid #191919;
-  transition: all 0.5s ease;
 }
 .menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem.p-d {
   font-size: 0.8rem;
@@ -569,8 +588,14 @@ table {
 .menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem.last {
   border: none;
 }
-.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem:hover {
-  background: #373737;
+.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem span {
+  display: block;
+  padding: 11px 20px;
+  border: 1px solid #373737;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  font-size: 0.9rem;
 }
 
 .gallery {
@@ -598,6 +623,8 @@ table {
   margin-bottom: 0;
   background-color: nome;
   border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -614,6 +641,75 @@ table {
 /* Portrait and Landscape */
 /* Portrait */
 /* Landscape */
+.right-menu {
+  background-color: #000 !important;
+}
+.right-menu .filter {
+  display: block;
+  margin: 20px 30px;
+}
+.right-menu .filter .filter-box {
+  display: block;
+  margin: 10px 0;
+}
+.right-menu .filter .filter-box label {
+  float: left;
+  margin: 15px 0;
+  color: #87230f;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.right-menu .filter .filter-box .tipo-content {
+  float: left;
+  margin: 5px;
+  width: 100%;
+}
+.right-menu .filter .filter-box .tipo-content #tipo {
+  float: left;
+  margin: 5px;
+}
+.right-menu .filter .filter-box .tipo-content span {
+  float: left;
+  margin: 5px;
+  font-size: 1rem;
+}
+.right-menu .filter .filter-box #preco {
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  color: #87230f;
+  font-size: 1.2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.right-menu .filter .filter-box #filtrar-btn {
+  width: 100%;
+  background-color: #87230f;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+}
+
+.btn.more {
+  background-color: #b6422b;
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-radius: 0;
+  transition: background-color .5s ease;
+  font-size: 2em;
+  z-index: 20;
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+}
+
 img {
   border: 0;
   max-width: 100%;
@@ -740,7 +836,7 @@ body {
   top: 0;
   -webkit-transition: -webkit-transform 500ms ease 0s;
   transition: transform 500ms ease 0s;
-  width: 15.625rem;
+  width: 16.625rem;
   z-index: 0;
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
@@ -754,23 +850,39 @@ body {
 .page .left-menu ul li a {
   text-transform: uppercase;
   border-bottom: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: #87230f;
   display: block;
   padding: 0.66667rem;
   -webkit-transition: background 300ms ease;
-  transition: background 300ms ease;
+  transition: all 0.3s ease;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 .page .left-menu ul li a:hover {
   background: #242424;
-}
-.page .left-menu ul li a:active {
-  background: #242424;
+  color: #fff;
 }
 .page .left-menu ul li a i {
   margin-right: 5px;
   color: #87230f;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+.page .left-menu ul li.active a {
+  text-transform: uppercase;
+  border-bottom: none;
+  background: #242424;
+  color: #fff;
+  display: block;
+  padding: 0.66667rem;
+  -webkit-transition: background 300ms ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.page .left-menu ul li.active a i {
+  margin-right: 5px;
+  color: #87230f;
+  font-size: 1.5rem;
 }
 .page .right-menu {
   background: #333;
@@ -994,7 +1106,7 @@ body {
 .page .main .main-container.privacidade h1 {
   text-align: center;
   color: #87230f;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
 }
 .page .main .main-container.privacidade .box-priv {
@@ -1141,14 +1253,10 @@ body {
   font-weight: 700;
 }
 .locate .form-locate #localizeme {
-  z-index: 1;
   border: none;
   padding: 12px 10px 8px;
-  max-width: 275px;
   background-color: #2c2c2c;
-  position: absolute;
   text-transform: uppercase;
-  left: 10px;
 }
 .locate .form-locate #localizeme i {
   color: #fff;
@@ -1166,6 +1274,29 @@ body {
   color: #b6422b;
   text-decoration: none;
   line-height: 18px;
+}
+.locate .box-pol {
+  width: 100%;
+  margin: 10px auto;
+  float: left;
+}
+.locate .box-pol a {
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  background-color: #87230f;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.locate .box-pol a i {
+  margin-right: 5px;
+}
+.locate .box-pol a:hover {
+  background-color: rgba(135, 35, 15, 0.5);
+  color: #fff;
 }
 
 @media screen and (max-width: 990px) {

@@ -22,14 +22,13 @@
 <body>
   <section class="page container-fluid">
     <nav class="left-menu">
-      <ul>
-        <li><a href="./" ng-click="closeMenu"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-        <li><a href="#/sobre" ng-click="closeMenu"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Sobre</a></li>
-        <li><a href="#/anuncie" ng-click="closeMenu"><i class="fa fa-lock" aria-hidden="true"></i>Anuncie</a></li>
-        <li><a href="#/privacidade" ng-click="closeMenu"><i class="fa fa-lock" aria-hidden="true"></i>Privacidade</a></li>
+      <ul auto-active>
+        <li><a href="#/" ng-click="reload"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+        <li><a href="#/sobre" ng-click="reload"><i class="fa fa-exclamation-circle" aria-hidden="true"></i>Sobre</a></li>
+        <li><a href="#/anuncie" ng-click="reload"><i class="fa fa-lock" aria-hidden="true"></i>Anuncie</a></li>
+        <li><a href="#/privacidade" ng-click="reload"><i class="fa fa-lock" aria-hidden="true"></i>Termos de Uso e Privacidade</a></li>
       </ul>
     </nav>
-    <nav class="right-menu"></nav>
     <section class="main">
       <header class="header">
         <nav class="tab-nav">
@@ -37,10 +36,7 @@
             <a href="javascript:void(0);" class="fa fa-bars" aria-hidden="true"></a>
           </section>
           <section class="logo">
-            <a href="#">Peach</a>
-          </section>
-          <section class="right-nav">
-            <a href="javascript:void(0);" class="fa fa-sliders" aria-hidden="true"></a>
+            <a href="/">Peach</a>
           </section>
         </nav>
       </header>
