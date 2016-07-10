@@ -162,7 +162,7 @@
           &.last {
             border: none;
           }
-          span {
+          div {
             display: block;
             padding: 11px 20px;
             border: 1px solid #373737;
@@ -170,6 +170,9 @@
             border-right: none;
             border-bottom: none;
             font-size: 0.9rem;
+            span {
+              float: right;
+            }
           }
         }
       }

@@ -588,7 +588,7 @@ table {
 .menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem.last {
   border: none;
 }
-.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem span {
+.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem div {
   display: block;
   padding: 11px 20px;
   border: 1px solid #373737;
@@ -596,6 +596,9 @@ table {
   border-right: none;
   border-bottom: none;
   font-size: 0.9rem;
+}
+.menu_profile .menu_profile_content .menu_items.accordion .submenu .subitem div span {
+  float: right;
 }
 
 .gallery {
