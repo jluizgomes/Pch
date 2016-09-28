@@ -1,0 +1,32 @@
+<section class="locate col-xs-12 col-md-12 col-sm-12">
+  <div class="img-container col-xs-12 col-md-12 col-sm-12">
+    <img src="images/logo-locate.png" alt="Peach" />
+    <p>
+      O web-app móvel para quem busca <br>
+entretenimento adulto
+    </p>
+  </div>
+  <div class="box-container col-xs-12 col-md-12 col-sm-12">
+    <div class="box-item container">
+      <div class="box-pol">
+        <h1>Por favor, Defina sua localização atual.</h1>
+        <a href="#" ng-click="GetMyLocation()">
+          <i class="fi-target-two"></i>ME ENCONTRE
+        </a>
+      </div>
+      <form class="form-locate col-xs-12 col-md-12 col-sm-12" action="" method="post">
+        <p class="col-xs-12 col-md-12 col-sm-12">
+          Eu tenho mais de 18 anos.
+          Concordo com os <a href="#/privacidade">Termos e Condições,</a> bem como a <a href="#/privacidade">política de privacidade.</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  $(function() {
+    $('.locate').css({
+      'height': $(window).height() - 45
+    });
+  });
+</script>

@@ -1,30 +1,27 @@
 <section class="main-container">
     <section class="row">
         <section class="gallery col-md-9 col-md-push-3">
-            <div class="arrow-left">
-                <img ng-src="../images/arrow-gallery-left.png" alt="Arrow Left" />
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper" >
+                    <!-- Slides -->
+                    <div class="swiper-slide" ng-repeat="item in content.photos">
+                      <img ng-src="{{item.url}}" alt="" class="thumb" />
+                    </div>
+
+                </div>
+                    <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             </div>
-            <div class="arrow-right">
-                <img ng-src="../images/arrow-gallery-right.png" alt="Arrow Right" />
-            </div>
-            <ul class="gallery-item">
-                <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://esq.h-cdn.co/assets/15/41/1600x800/landscape-1444418511-emilia-clarke-sexiest-woman-alive-2015-4482-11.jpg" alt="Babayaga" /></a>
-                </li>
-                <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://i2.wp.com/www.almomento.mx/wp-content/uploads/2015/10/gallery-1444418995-emilia-clarke-sexiest-woman-alive-2015-007.jpg"><img class="lazyOwl" ng-src="http://i2.wp.com/www.almomento.mx/wp-content/uploads/2015/10/gallery-1444418995-emilia-clarke-sexiest-woman-alive-2015-007.jpg" alt="Babayaga" /></a>
-                </li>
-                <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-                </li>
-                <li>
-                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg"><img class="lazyOwl" ng-src="http://www.picturenews.co/wp-content/uploads/2015/10/emilia-clarke-13.jpg" alt="Babayaga" /></a>
-                </li>
-            </ul>
         </section>
         <section class="menu_profile col-md-3 col-md-pull-9">
             <aside class="menu_profile_content">
                 <h1>{{content.name}}</h1>
+				<h2 style="text-align: center">Preço: <span>{{content.price | currency:"R$"}} /h</span></h2>
                 <nav class="menu_items accordion" id="accordion" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
                     <div role="tab" id="headingOne">
@@ -32,14 +29,16 @@
                     </div>
                     <div id="collapseOne" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                         <div class="subitem panel-body">
-                            <div>Genero: <span>{{content.gender}}</span></span></div>
-                            <div>Idade: <span>{{content.age}}</span></div>
-                            <div>Peso: <span>{{content.weight}}</span></div>
-                            <div>Altura: <span>{{content.height}}</span></div>
-                            <div>Manequim: <span>{{content.mannequin}}</span></div>
-                            <div>Seios: <span>{{content.bust}}</span></div>
-                            <div>Cintura: <span>{{content.waist}}</span></div>
-                            <div>Peso: <span>{{content.feet}}</span></div>
+                            <div>Sobre:</br> </br>{{content.about}}</div>
+                            <div>Genero: <span>{{content.gender}}</span></div>
+                            <div>Tipo: <span>{{content.etnia}}</span></div>
+                            <div>Idade: <span>{{content.age}} Anos</span></div>
+                            <div>Peso: <span>{{content.weight}} Kg</span></div>
+                            <div>Altura: <span>{{content.height}} Metros</span></div>
+                            <div>Manequim: <span>{{content.mannequin}} </span></div>
+                            <div>Seios: <span>{{content.bust}} Cm</span></div>
+                            <div>Cintura: <span>{{content.waist}} Cm</span></div>
+                            <div>Pes: <span>{{content.feet}} </span></div>
                             <div>Tatuagem: <span>{{content.tattoo}}</span></div>
                             <div>Sexualidade: <span>{{content.sexuality}}</span></div>
                         </div>
@@ -52,10 +51,11 @@
                             <div>Preço: <span>{{content.price | currency:"R$"}}</span></div>
                             <div>Duração: <span>{{content.duration}} /h</span></div>
                             <div>Disponivel para Viagem: <span>{{content.travel}}</span></div>
+                            <div>Aceito: {{content.accepts}}</div>
                         </div>
                     </div>
                     <div role="tab" id="headingThree">
-                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-clock-o" aria-hidden="true"></i>Disponibilidade</h3>
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-phone-square" aria-hidden="true"></i>Contato</h3>
                     </div>
                     <div id="collapseThree" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <div class="subitem panel-body">
@@ -72,51 +72,13 @@
 </section>
 
 <script type="text/javascript">
-    //Carousel
-    var owl = $(".gallery-item");
-    owl.owlCarousel({
-        navigation: false,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        pagination: false,
-        lazyLoad: true,
-        responsive: true
+var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        loop: true
     });
-    $(".arrow-right").click(function () {
-        owl.trigger('owl.next');
-    });
-    $(".arrow-left").click(function () {
-        owl.trigger('owl.prev');
-    });
-
-    if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "true") {
-        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
-            'color':'#b6422b',
-            'margin-right':'20px',
-            'font-size':'1.5rem'
-        });
-    } else if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "false") {
-        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
-            'color': '#373737',
-            'margin-right': '20px',
-            'font-size': '1.5rem'
-        });
-    }
-
-    ////Lightbox
-    //$(".fancybox-thumbs").fancybox({
-    //autoSize: true,
-    //scrolling: 'auto',
-    //fitToView: false,
-    //width: 'auto',
-    //maxWidth: '100%',
-    //padding: 0,
-    //closeClick: true,
-    //prevEffect: 'none',
-    //nextEffect: 'none',
-    //closeBtn: false,
-    //arrows: true,
-    //nextClick: true
-    //});
 </script>

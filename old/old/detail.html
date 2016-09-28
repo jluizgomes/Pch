@@ -1,0 +1,126 @@
+<section class="main-container">
+    <section class="row">
+        <section class="gallery col-md-9 col-md-push-3">
+            <!-- <div class="arrow-left">
+                <img ng-src="../images/arrow-gallery-left.png" alt="Arrow Left" />
+            </div>
+            <div class="arrow-right">
+                <img ng-src="../images/arrow-gallery-right.png" alt="Arrow Right" />
+            </div>
+            <ul class="gallery-item">
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="https://placehold.it/1920x1080"><img class="lazyOwl" ng-src="https://placehold.it/1920x1080" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="https://placehold.it/1920x1080"><img class="lazyOwl" ng-src="https://placehold.it/1920x1080" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="https://placehold.it/1920x1080"><img class="lazyOwl" ng-src="https://placehold.it/1920x1080" alt="Babayaga" /></a>
+                </li>
+                <li>
+                    <a class="fancybox-thumbs" data-fancybox-group="thumb" ng-src="https://placehold.it/1920x1080"><img class="lazyOwl" ng-src="https://placehold.it/1920x1080" alt="Babayaga" /></a>
+                </li>
+            </ul> -->
+        </section>
+        <section class="menu_profile col-md-3 col-md-pull-9">
+            <aside class="menu_profile_content">
+                <h1>{{content.name}}</h1>
+				<h2 style="text-align: center">Preço: <span>{{content.price | currency:"R$"}} /h</span></h2>
+                <nav class="menu_items accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div role="tab" id="headingOne">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-user" aria-hidden="true"></i>Perfil</h3>
+                    </div>
+                    <div id="collapseOne" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="subitem panel-body">
+                            <div>Sobre:</br> </br>{{content.about}}</div>
+                            <div>Genero: <span>{{content.gender}}</span></div>
+                            <div>Tipo: <span>{{content.etnia}}</span></div>
+                            <div>Idade: <span>{{content.age}} Anos</span></div>
+                            <div>Peso: <span>{{content.weight}} Kg</span></div>
+                            <div>Altura: <span>{{content.height}} Metros</span></div>
+                            <div>Manequim: <span>{{content.mannequin}} </span></div>
+                            <div>Seios: <span>{{content.bust}} Cm</span></div>
+                            <div>Cintura: <span>{{content.waist}} Cm</span></div>
+                            <div>Pes: <span>{{content.feet}} </span></div>
+                            <div>Tatuagem: <span>{{content.tattoo}}</span></div>
+                            <div>Sexualidade: <span>{{content.sexuality}}</span></div>
+                        </div>
+                    </div>
+                    <div role="tab" id="headingTwo">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-usd" aria-hidden="true"></i>Preços e Serviços</h3>
+                    </div>
+                    <div id="collapseTwo" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="subitem p-d panel-body">
+                            <div>Preço: <span>{{content.price | currency:"R$"}}</span></div>
+                            <div>Duração: <span>{{content.duration}} /h</span></div>
+                            <div>Disponivel para Viagem: <span>{{content.travel}}</span></div>
+                            <div>Aceito: {{content.accepts}}</div>
+                        </div>
+                    </div>
+                    <div role="tab" id="headingThree">
+                      <h3 role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-phone-square" aria-hidden="true"></i>Contato</h3>
+                    </div>
+                    <div id="collapseThree" class="submenu panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="subitem panel-body">
+                            <div>Telefone: <span>{{content.phonenumber}}</span></div>
+                        </div>
+                    </div>
+                    <a href="javascript:history.go(-1);" class="btn voltar col-xs-6 col-md-6 col-sm-6"><i class="fa fa-chevron-left" aria-hidden="true"></i>Voltar</a>
+                    <a href="tel:+{{content.phonenumber}}" class="btn continue col-xs-6 col-md-6 col-sm-6"><i class="fa fa-phone" aria-hidden="true"></i>Ligar</a>
+                  </div>
+                </nav>
+            </aside>
+        </section>
+    </section>
+</section>
+
+<script type="text/javascript">
+    //Carousel
+    var owl = $(".gallery-item");
+    owl.owlCarousel({
+        navigation: false,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        singleItem: true,
+        pagination: false,
+        lazyLoad: true,
+        responsive: true
+    });
+    $(".arrow-right").click(function () {
+        owl.trigger('owl.next');
+    });
+    $(".arrow-left").click(function () {
+        owl.trigger('owl.prev');
+    });
+
+    if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "true") {
+        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
+            'color':'#b6422b',
+            'margin-right':'20px',
+            'font-size':'1.5rem'
+        });
+    } else if ($('.menu_profile .menu_profile_content .menu_items.accordion h3').attr("aria-expanded") == "false") {
+        $('.menu_profile .menu_profile_content .menu_items.accordion h3 i').css({
+            'color': '#373737',
+            'margin-right': '20px',
+            'font-size': '1.5rem'
+        });
+    }
+
+    ////Lightbox
+    //$(".fancybox-thumbs").fancybox({
+    //autoSize: true,
+    //scrolling: 'auto',
+    //fitToView: false,
+    //width: 'auto',
+    //maxWidth: '100%',
+    //padding: 0,
+    //closeClick: true,
+    //prevEffect: 'none',
+    //nextEffect: 'none',
+    //closeBtn: false,
+    //arrows: true,
+    //nextClick: true
+    //});
+</script>

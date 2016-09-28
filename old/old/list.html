@@ -1,0 +1,15 @@
+<section class="main-container" >
+    
+    <section class="items col-md-4 col-sm-6 col-md-4" ng-animate="'animate'" ng-repeat="item in contents track by item.id">
+        <a ui-sref="detail({id: item.id})">
+            <img ng-src="https://s-media-cache-ak0.pinimg.com/564x/29/c4/09/29c40902f59295be36a59d3a928a83e5.jpg" alt="{{item.name}}" class="thumb" />
+            <h2 class="title">{{item.name}}</h2>
+            <div class="indicadores">
+                <span class="price"><i class="fa fa-usd" aria-hidden="true"></i>{{item.price | currency:"R$"}}/<small>h</small></span>
+                <span class="distance"><i class="fa fa-location-arrow" aria-hidden="true"></i>{{item.distancia}}<small>km</small></span>
+            </div>
+            <div class="degrade-item"></div>
+        </a>
+    </section>    
+</section>
+<a ng-click="loadMore()" class="btn more"><i class="fa fa-plus" aria-hidden="true"></i>Mais</a>
